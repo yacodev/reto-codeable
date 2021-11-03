@@ -1,8 +1,15 @@
-import { Img, Text, ContainerHeader  } from "./Button"
+import styled from "@emotion/styled";
+import { Img, Text } from "./Button"
+
+const ContainerView = styled.div`
+  display:flex;
+  flex-direction:row;
+`
+
 function View(props){
 
   return (
-    <ContainerHeader onClick={props.onClick}>
+    <ContainerView onClick={props.onClick}>
       <Img>
         <img src={props.icon} alt="icon" />
       </Img>
@@ -15,9 +22,9 @@ function View(props){
           )}
         </p>
       </Text>
-    </ContainerHeader>
+    </ContainerView>
   )
 }
 
 
-export default View
+export {View}

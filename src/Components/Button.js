@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 const Img = styled.div`
   display:flex;
   align-items:center;
+  margin-left:10px;
   img{
     width:20px;
     height:20px;
@@ -23,15 +24,16 @@ const Text = styled.div`
   }
 `
 
-const ContainerHeader = styled.div`
+const ContainerButton = styled.div`
   display:flex;
   flex-direction:row;
+  cursor:pointer;
 `
 
 function Button(props){
 
   return (
-    <ContainerHeader onClick={props.onClick}>
+    <ContainerButton onClick={props.onClick}>
       <Img>
         <img src={props.icon} alt="icon" />
       </Img>
@@ -43,9 +45,9 @@ function Button(props){
           ""
         )}
       </Text>
-    </ContainerHeader>
+    </ContainerButton>
   )
 }
 
 
-export {Button,Img,Text,ContainerHeader}
+export {Button,Img,Text,ContainerButton}
